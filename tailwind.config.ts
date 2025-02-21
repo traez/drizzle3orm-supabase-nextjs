@@ -11,8 +11,17 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        colorValue: "#025955",
+      },
+      fontFamily: {
+        trebuchetMs: ["Trebuchet MS"],
+      },
+      screens: {
+        xs: "480px",
+        "1xl": "1440px",
       },
     },
   },
   plugins: [],
+  darkMode: "selector",
 } satisfies Config;

@@ -1,0 +1,1 @@
+ALTER TABLE "c2Posts" ALTER COLUMN "text" SET DATA TYPE varchar(240);
