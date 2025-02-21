@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 //import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 /* const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased flex flex-col justify-center items-center min-h-screen w-full font-trebuchetMs bg-[#d5dee4]">
-        <main className="flex-grow h-full w-full max-w-[1440px]">
+      <body className="antialiased flex flex-col justify-center items-center min-h-screen w-full font-trebuchetMs bg-[#b0bbba]">
+        <Header />
+        <main className="flex-grow h-full w-full max-w-[1440px] bg-[#d5dee4]">
           {children}
         </main>
+        <Footer />
+        <Toaster position="top-center" />
       </body>
     </html>
   );

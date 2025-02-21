@@ -1,16 +1,15 @@
-import { pgTable, serial, text, varchar, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, serial, varchar, timestamp } from "drizzle-orm/pg-core";
 
-export const c2Posts = pgTable("c2Posts", {
+export const c2Profiles = pgTable("c2Profiles", {
   id: serial("id").primaryKey(),
-  text: varchar("text", { length: 225 }).notNull(),
-  imageUrl: text("image_url")
-    .notNull()
-    .default("https://picsum.photos/300/200"),
+  first: varchar("first", { length: 30 }).notNull(),
+  last: varchar("last", { length: 30 }).notNull(),
+  username: varchar("username", { length: 30 }).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at")
     .notNull()
     .$onUpdate(() => new Date()),
 });
 
-export type InsertC2Post = typeof c2Posts.$inferInsert;
-export type SelectC2Post = typeof c2Posts.$inferSelect;
+export type InsertC2Profiles = typeof c2Profiles.$inferInsert;
+export type SelectC2Profiles = typeof c2Profiles.$inferSelect;
