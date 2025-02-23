@@ -20,7 +20,7 @@ Drizzle ORM practical app based on my TechCareer Transition schedule.
 
 ### The Challenge/User Stories
 
-Build a full-stack Next.js 14 app with Supabase, Drizzle ORM, and ShadCN UI, integrating authentication, database management, and UI components. The app will allow users to create, edit, and delete notes, implementing infinite scrolling for a seamless experience. Key challenges include setting up database relations, handling migrations, optimizing API calls, and ensuring a smooth UI/UX. The goal is to apply Drizzle ORM effectively in a real-world project, solidifying skills in schema design, query optimization, and Supabase integration while following best practices from multiple resources.     
+Build a full-stack Next.js 15 app with Supabase and Drizzle ORM, integrating authentication, database management, and UI components. The app will allow users to create, edit, and delete data. Key challenges include setting up database relations, handling migrations, optimizing API calls, and ensuring a smooth UI/UX. The goal is to apply Drizzle ORM effectively in a real-world project, solidifying skills in schema design, query optimization, and Supabase integration while following best practices from multiple resources.     
 
 ### Screenshot
 
@@ -28,8 +28,8 @@ Build a full-stack Next.js 14 app with Supabase, Drizzle ORM, and ShadCN UI, int
 
 ### Links
 
-- Solution URL: [https://github.com/traez/drizzle-orm-supabase-nextjs](https://github.com/traez/drizzle-orm-supabase-nextjs)
-- Live Site URL: [https://drizzle-orm-supabase-nextjs.vercel.app/](https://drizzle-orm-supabase-nextjs.vercel.app/)
+- Solution URL: [https://github.com/traez/drizzle3orm-supabase-nextjs](https://github.com/traez/drizzle3orm-supabase-nextjs)
+- Live Site URL: [https://drizzle3orm-supabase-nextjs.vercel.app/](https://drizzle3orm-supabase-nextjs.vercel.app/)
 
 ## My process
 
@@ -44,11 +44,12 @@ Build a full-stack Next.js 14 app with Supabase, Drizzle ORM, and ShadCN UI, int
 - Typescript
 - Nodejs            
 - Tailwind CSS     
-- Sonner 
+- sonner 
 - dotenv  
 - drizzle 
 - postgres 
 - react-icons  
+- tsx    
 
 ### What I learned
    
@@ -115,8 +116,20 @@ CRUD operations are handled via Next.js API routes using DrizzleORM
 Migrations are backend actions managed by developers  
 Users interact with the frontend, not directly with the database structure   
 
-**14 Optimizing Workflow**  
-Consider adding npx commands as scripts in `package.json` for easier execution.    
+**14 Custom Migration Tracking System**
+- Unlike other ORMs that dictate specific migration workflows, Drizzle ORM adopts a "bring your own process" philosophy. It provides core tools (generate, push, studio) but lets developers architect their own migration strategy. This flexibility empowers teams to implement workflows that match their specific requirements, though it requires more thoughtful planning around migration management. This initially posed problems for me. But eventually I implemented a robust migration system using a `c2MigrationHistory` table in the database.
+- This table tracks each migration's name, checksum, and execution timestamp.
+- Benefits of this approach:
+  - Ensures migrations are applied only once and in the correct order.
+  - Prevents accidental re-runs or conflicting changes.
+  - Allows safe evolution of database schema while preserving existing data.
+  - Combines well with Drizzle's built-in migration tools for a comprehensive solution.
+- Process:
+  - Generate migration files using `drizzle-kit generate`.
+  - Run migrations through a custom script that checks the history table.
+  - Provides version control and safeguards for existing data.
+- This system addresses common challenges in managing database schema changes, especially when altering existing tables.
+- Offers a stable and efficient way to handle database evolution in Supabase/Drizzle/Next.js applications.   
 
 ### Continued development
 
