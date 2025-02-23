@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased flex flex-col justify-center items-center min-h-screen w-full font-trebuchetMs bg-[#b0bbba]">
         <Header />
-        <main className="flex-grow h-full w-full max-w-[1440px] bg-[#d5dee4]">
+        <main className="flex-grow h-full w-full max-w-[1440px]">
           {children}
         </main>
         <Footer />

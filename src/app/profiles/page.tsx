@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 
 const pagesProfiles = () => {
   return (
-    <div className="h-full w-full">
+    <>
       <Profiles />
-    </div>
+    </>
   );
 };
 

@@ -64,6 +64,20 @@
       "when": 1740250221727,
       "tag": "0008_misty_hairball",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1740306291848,
+      "tag": "0009_reflective_sister_grimm",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1740309532184,
+      "tag": "0010_optimal_tusk",
+      "breakpoints": true
     }
   ]
 }

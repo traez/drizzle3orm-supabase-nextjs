@@ -157,7 +157,7 @@ const Profiles = () => {
   };
 
   return (
-    <section className="h-full w-full flex flex-col text-[#1B2232] mx-auto py-4 px-8 sm:px-20">
+    <section className="min-h-[calc(100vh-91px)] w-full flex flex-col text-[#1B2232] bg-[#91c9ef] mx-auto py-4 px-8 sm:px-20">
       <h1 className="mx-auto text-[1.5rem] mb-2 font-extrabold">Profiles</h1>
       {/* Menu - Add profile */}
       <menu className="flex justify-end items-center mb-8 px-4">

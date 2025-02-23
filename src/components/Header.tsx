@@ -13,10 +13,10 @@ export default async function Header() {
       </menu>
       <aside className="flex justify-center items-center gap-4 md:gap-6">
         <Link
-          href="/todos"
+          href="/usersposts"
           className="text-base font-semibold border-2 border-blue-900 px-4 py-2 rounded-md hover:bg-yellow-300  transition duration-300"
         >
-          ToDos
+          UsersPosts
         </Link>
         <Link
           href="/notes"
