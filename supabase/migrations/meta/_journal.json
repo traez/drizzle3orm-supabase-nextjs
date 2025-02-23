@@ -57,6 +57,13 @@
       "when": 1740160325944,
       "tag": "0007_even_master_chief",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1740250221727,
+      "tag": "0008_misty_hairball",
+      "breakpoints": true
     }
   ]
 }

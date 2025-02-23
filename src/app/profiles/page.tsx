@@ -8,10 +8,9 @@ export const metadata: Metadata = {
 
 const pagesProfiles = () => {
   return (
-    <>
-      <header className="font-semibold text-2xl">Profiles</header>
+    <div className="h-full w-full">
       <Profiles />
-    </>
+    </div>
   );
 };
 
