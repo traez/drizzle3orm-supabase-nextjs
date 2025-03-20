@@ -69,9 +69,10 @@ Run `npm install` to update dependencies
 Test the application: `npm run dev` or `yarn dev`  
 
 **4 Installation Process**  
-`npm install drizzle-orm postgres @paralleldrive/cuid2`  
+`npm install drizzle-orm postgres dotenv`  
 `npm install -D drizzle-kit`  
-Note: `drizzle-kit` is a development dependency for CLI tasks.
+`npm install -D tsx`
+Note: `drizzle-kit` and `tsx` are development dependencies for CLI tasks.
 
 **5 IDE Productivity Tip**  
 Modern IDEs like VS Code allow running npm scripts directly from the `package.json` file, enhancing workflow efficiency.  
