@@ -71,7 +71,7 @@ Test the application: `npm run dev` or `yarn dev`
 **4 Installation Process**  
 `npm install drizzle-orm postgres dotenv`  
 `npm install -D drizzle-kit`  
-`npm install -D tsx`
+`npm install -D tsx`  
 Note: `drizzle-kit` and `tsx` are development dependencies for CLI tasks.
 
 **5 IDE Productivity Tip**  
